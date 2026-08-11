@@ -1,0 +1,4 @@
+MyWork Artifacts List:
+1. Prom.ua Marketplace - QA Regression Quality Report (TestRail) - functional & regression testing of authorization and search modules.
+2. CatPaw Share - Release Quality Report (TestRail) - full regression cycle of MVP core features.
+3. YouTube Core Modules - Release Quality Report (TestRail) - cross-platform smoke & regression testing cycle.

@@ -1,0 +1,424 @@
+{
+  "info": {
+    "_postman_id": "1b7e54fd-7e7c-4654-af6d-668be8872c24",
+    "name": "Homework 17",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "57051314",
+    "_collection_link": "https://go.postman.co/collection/57051314-1b7e54fd-7e7c-4654-af6d-668be8872c24?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Create user",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [
+              "pm.globals.set(\"user_name\", \"yelyzaveta\");",
+              "pm.globals.set(\"user_city\", \"Kyiv\");"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "pm.test(\"Response time is less than 5000ms\", function () {",
+              "    pm.expect(pm.response.responseTime).to.be.below(5000);",
+              "});",
+              "pm.globals.set(\"user_id\", pm.response.json().id);"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"{{user_name}}\",\n  \"age\": \"38\",\n  \"gender\": \"female\",\n  \"city\": \"{{user_city}}\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "em.staging.api.onereach.ai/http/1b3bebb7-e882-4f1e-a74b-ee381bfa69d6/users",
+          "host": [
+            "em",
+            "staging",
+            "api",
+            "onereach",
+            "ai"
+          ],
+          "path": [
+            "http",
+            "1b3bebb7-e882-4f1e-a74b-ee381bfa69d6",
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create user (Negative)",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [
+              "pm.globals.set(\"user_name\", \"yelyzaveta\");",
+              "pm.globals.set(\"user_city\", \"Kyiv\");"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 400\", function () {",
+              "    pm.response.to.have.status(400);",
+              "});",
+              "pm.test(\"Body matches string\", function () {",
+              "    pm.expect(pm.response.text()).to.include(\"Validation error: name is invalid\");",
+              "});",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"{{user_name_negative}}\",\n  \"age\": \"38\",\n  \"gender\": \"female\",\n  \"city\": \"{{user_city}}\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "em.staging.api.onereach.ai/http/1b3bebb7-e882-4f1e-a74b-ee381bfa69d6/users",
+          "host": [
+            "em",
+            "staging",
+            "api",
+            "onereach",
+            "ai"
+          ],
+          "path": [
+            "http",
+            "1b3bebb7-e882-4f1e-a74b-ee381bfa69d6",
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET user",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "pm.test(\"Body matches string\", function () {",
+              "    pm.expect(pm.response.text()).to.include(\"yelyzaveta\");",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "em.staging.api.onereach.ai/http/1b3bebb7-e882-4f1e-a74b-ee381bfa69d6/users?id={{user_id}}",
+          "host": [
+            "em",
+            "staging",
+            "api",
+            "onereach",
+            "ai"
+          ],
+          "path": [
+            "http",
+            "1b3bebb7-e882-4f1e-a74b-ee381bfa69d6",
+            "users"
+          ],
+          "query": [
+            {
+              "key": "id",
+              "value": "{{user_id}}"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DELETE user",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "pm.test(\"Response time is less than 200ms\", function () {",
+              "    pm.expect(pm.response.responseTime).to.be.below(3000);",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "em.staging.api.onereach.ai/http/1b3bebb7-e882-4f1e-a74b-ee381bfa69d6/users?id={{user_id}}",
+          "host": [
+            "em",
+            "staging",
+            "api",
+            "onereach",
+            "ai"
+          ],
+          "path": [
+            "http",
+            "1b3bebb7-e882-4f1e-a74b-ee381bfa69d6",
+            "users"
+          ],
+          "query": [
+            {
+              "key": "id",
+              "value": "{{user_id}}"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DELETE user (Negtive)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "pm.test(\"Body matches string\", function () {",
+              "    pm.expect(pm.response.text()).to.include(\"No user found\");",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "em.staging.api.onereach.ai/http/1b3bebb7-e882-4f1e-a74b-ee381bfa69d6/users?id={{user_id_negative}}",
+          "host": [
+            "em",
+            "staging",
+            "api",
+            "onereach",
+            "ai"
+          ],
+          "path": [
+            "http",
+            "1b3bebb7-e882-4f1e-a74b-ee381bfa69d6",
+            "users"
+          ],
+          "query": [
+            {
+              "key": "id",
+              "value": "{{user_id_negative}}"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET user (Negative)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Body matches string\", function () {",
+              "    pm.expect(pm.response.text()).to.include(\"No users found\");",
+              "});",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "em.staging.api.onereach.ai/http/1b3bebb7-e882-4f1e-a74b-ee381bfa69d6/users?id=89187b8b-42NEGATIVE",
+          "host": [
+            "em",
+            "staging",
+            "api",
+            "onereach",
+            "ai"
+          ],
+          "path": [
+            "http",
+            "1b3bebb7-e882-4f1e-a74b-ee381bfa69d6",
+            "users"
+          ],
+          "query": [
+            {
+              "key": "id",
+              "value": "89187b8b-42NEGATIVE"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "EDIT user",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "pm.test(\"Body matches string\", function () {",
+              "    pm.expect(pm.response.text()).to.include(\"yelyzaveta3\");",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"id\": \"{{user_id}}\",\n  \"name\": \"yelyzaveta3\",\n  \"age\": \"38\",\n  \"gender\": \"female\",\n  \"city\": \"Kyiv\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "em.staging.api.onereach.ai/http/1b3bebb7-e882-4f1e-a74b-ee381bfa69d6/users",
+          "host": [
+            "em",
+            "staging",
+            "api",
+            "onereach",
+            "ai"
+          ],
+          "path": [
+            "http",
+            "1b3bebb7-e882-4f1e-a74b-ee381bfa69d6",
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "EDIT user (Negative)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "pm.test(\"Body matches string\", function () {",
+              "    pm.expect(pm.response.text()).to.include(\"No user found\");",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"id\": \"{{user_id_negative}}\",\n  \"name\": \"yelyzaveta3\",\n  \"age\": \"38\",\n  \"gender\": \"female\",\n  \"city\": \"Kyiv\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "em.staging.api.onereach.ai/http/1b3bebb7-e882-4f1e-a74b-ee381bfa69d6/users",
+          "host": [
+            "em",
+            "staging",
+            "api",
+            "onereach",
+            "ai"
+          ],
+          "path": [
+            "http",
+            "1b3bebb7-e882-4f1e-a74b-ee381bfa69d6",
+            "users"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
