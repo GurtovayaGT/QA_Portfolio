@@ -9,7 +9,7 @@
   <img src="https://img.shields.io/badge/Jira-0052CC?style=for-the-badge&logo=jira&logoColor=white" alt="Jira">
   <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git">
   <img src="https://img.shields.io/badge/DevTools-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white" alt="DevTools">
-  <img src="https://img.shields.io/badge/ManualTesting-4CAF50?style=for-the-badge&logo=ghostery&logoColor=white" alt="Manual Testing">
+  <img src="https://img.shields.io/badge/ManualTesting-4CAF50?style=for-the-badge&logo=opsgenie&logoColor=white" alt="Manual Testing">
 </p>
 
 Цей ресурс систематизує практичні навички та інструментарій, отримані під час професійної підготовки за напрямом QA Manual. Представлені матеріали базуються на результатах навчання в **Beetroot Academy / Helvetas Ukraine**.
