@@ -52,5 +52,12 @@ Practical materials are structured into the following sections:
 
 ##  Contact Information
 
- **Telegram:** [https://t.me/AnnaGT1](https://t.me/AnnaGT1)  
- **Email:** [Gurtovayaad@gmail.com](mailto:Gurtovayaad@gmail.com)
+<p align="center">
+  <a href="https://t.me/AnnaGT1" target="_blank">
+    <img src="https://img.shields.io/badge/Telegram-@AnnaGT1-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram">
+  </a>
+  &nbsp;&nbsp;
+  <a href="mailto:Gurtovayaad@gmail.com" target="_blank">
+    <img src="https://img.shields.io/badge/Gmail-Gurtovayaad@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail">
+  </a>
+</p>
