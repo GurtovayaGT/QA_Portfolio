@@ -1,4 +1,4 @@
-# Домашня робота: Рівні та типи тестування програмного забезпечення (Завдання №5)
+# Рівні та типи тестування програмного забезпечення (Завдання №5)
 
 > Оригінальний файл роботи: [Переглянути виконану роботу у PDF](./HW05_Levels_Types_Testing_Hurtova.pdf)
 > Тест-кейси та NFR: [Переглянути таблицю (Google Sheets)](https://docs.google.com/spreadsheets/d/1wae4iivJA5BA3Rx4xwNIK0Xbqma_lMgL/edit?usp=sharing&ouid=100346096209743919858&rtpof=true&sd=true)

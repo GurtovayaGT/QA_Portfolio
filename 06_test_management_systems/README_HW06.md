@@ -1,4 +1,4 @@
-# Домашня робота: Системи тест-менеджменту та управління проєктами (Завдання №6)
+# Системи тест-менеджменту та управління проєктами (Завдання №6)
 
 > Оригінальний файл роботи: [Переглянути виконану роботу у PDF](./HW06_Test_Management_Systems_Hurtova.pdf)
 > Проєкт CatPaw Share у TestRail: [Переглянути Test Run](https://qahelvetas7.testrail.io/index.php?/runs/view/18&group_by=cases:section_id&group_order=asc&display=tree)

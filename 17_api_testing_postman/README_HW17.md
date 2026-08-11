@@ -1,4 +1,4 @@
-# Домашня робота: Тестування API за допомогою Postman (Завдання №17)
+# Тестування API за допомогою Postman (Завдання №17)
 
 > Оригінальний файл роботи: [Переглянути виконану роботу у PDF](./HW17_API_Testing_Postman_Hurtova.pdf)
 > Postman-колекція: [Homework_17.postman_collection.json](./Homework_17.postman_collection.json)

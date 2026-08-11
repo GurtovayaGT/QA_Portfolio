@@ -1,4 +1,4 @@
-# Домашня робота: Тестування API за допомогою SoapUI (Завдання №18)
+# Тестування API за допомогою SoapUI (Завдання №18)
 
 > Оригінальний файл роботи: [Переглянути виконану роботу у PDF](./HW18_API_Testing_SoapUI_Hurtova.pdf)
 > SoapUI-проект: [Homework18soapuiproject.xml](./Homework18soapuiproject.xml)
