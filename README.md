@@ -3,6 +3,15 @@
 [![Visitor Count](https://komarev.com/ghpvc/?username=GurtovayaGT&color=blue&style=flat-square)](https://github.com/GurtovayaGT/QA_Portfolio)
 [![Status](https://img.shields.io/badge/Status-Ready%20for%20QA%20Role-brightgreen?style=flat-square)](https://github.com/GurtovayaGT)
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white" alt="Postman">
+  <img src="https://img.shields.io/badge/TestRail-24292E?style=for-the-badge&logo=testrail&logoColor=white" alt="TestRail">
+  <img src="https://img.shields.io/badge/Jira-0052CC?style=for-the-badge&logo=jira&logoColor=white" alt="Jira">
+  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git">
+  <img src="https://img.shields.io/badge/DevTools-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white" alt="DevTools">
+  <img src="https://img.shields.io/badge/ManualTesting-4CAF50?style=for-the-badge&logo=ghostery&logoColor=white" alt="Manual Testing">
+</p>
+
 Цей ресурс систематизує практичні навички та інструментарій, отримані під час професійної підготовки за напрямом QA Manual. Представлені матеріали базуються на результатах навчання в **Beetroot Academy / Helvetas Ukraine**.
 
 Даний репозиторій містить приклади документації, результати тест-дизайну, аналіз клієнт-серверної архітектури та результати тестування API.
